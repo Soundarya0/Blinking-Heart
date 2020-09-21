@@ -1,0 +1,127 @@
+.heart {
+  background-color: crimson;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 45%; 
+  top: 45%;
+  animation: heartbeat 1.25s infinite;
+}
+.heart::before,
+.heart::after {
+  content: "";
+  background-color: crimson;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  animation: pulsecolor 1.25s infinite;
+}
+.heart::before {
+  top: -100px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 100px;
+}
+.right-eye {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #000000;
+  right: 60px;
+  top: -10x;
+  animation: blink 1s infinite;
+.right-eye::before {
+  top: -50px;
+  right: 0;
+}
+.right-eye::after {
+  top: 0;
+  right: 50px;
+}
+ span {
+      position: absolute;
+      transition: all 0.3s;
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
+      margin-top: 5px;
+      background: #000;
+      border-radius: 50%;
+    }
+}
+.left-eye {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #000000;
+  left: 175px;
+  bottom: 137px;
+  animation: blink 1s infinite;
+}
+.left-eye::before {
+  top: -50px;
+  right: 0;
+}
+.left-eye::after {
+  top: 0;
+  right: 50px;
+}
+.mouth {
+  position: absolute;
+  height: 10px;
+  width: 65px;
+  border-radius: 50%;
+  background-color: #000000; 
+  align-item: center;
+  bottom: 70%;
+  left: 50%;
+  z-index: 2;
+  transform: rotate(45deg);
+}
+@keyframes heartbeat {
+    0% {
+    transform: scale(1)
+               rotate(-45deg);
+      }
+    10% {
+    transform: scale(1.25)
+               rotate(-45deg);
+    background-color: #ef3953;
+      }
+  100% {
+      transform: scale(1)
+                 rotate(-45deg);
+  }
+}
+
+@keyframes pulsecolor {
+  10% {
+  background-color: #ef3953;
+  }
+}
+
+@keyframes blink {
+ 0%, 100% {
+        transform: scale(1, .05);
+    }
+    5%,
+    95% {
+        transform: scale(1, 1);
+    }
+}
+
+
+
+Resources
